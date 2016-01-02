@@ -76,6 +76,8 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
+brew install nmap
+brew install tcptrace
 # brew install aircrack-ng
 # brew install bfg
 # brew install binutils
@@ -90,30 +92,22 @@ brew install woff2
 # brew install john
 # brew install knock
 # brew install netpbm
-brew install nmap
 # brew install pngcheck
 # brew install socat
 # brew install sqlmap
 # brew install tcpflow
 # brew install tcpreplay
-brew install tcptrace
 # brew install ucspi-tcp # `tcpserver` etc.
 # brew install xpdf
 # brew install xz
 
 # Install other useful binaries.
 brew install ack
-# brew install dark-mode
-#brew install exiv2
 brew install git
 brew install git-lfs
 brew install git-flow
 brew install git-extras
-# brew install imagemagick --with-webp
-# brew install lua
-# brew install lynx
 brew install p7zip
-# brew install pigz
 brew install pv
 brew install rename
 brew install rhino
@@ -124,6 +118,12 @@ brew install webkit2png
 brew install zopfli
 brew install pkg-config libffi
 brew install pandoc
+# brew install pigz
+# brew install dark-mode
+# brew install exiv2
+# brew install imagemagick --with-webp
+# brew install lua
+# brew install lynx
 
 # Lxml and Libxslt
 brew install libxml2
@@ -143,6 +143,18 @@ brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="~/Applications" java
 # brew cask install --appdir="~/Applications" xquartz
+brew cask install --appdir="~/Applications" flux
+brew cask install --appdir="~/Applications" vlc
+brew cask install --appdir="~/Applications" utorrent
+brew cask install --appdir="~/Applications" tweetbot
+brew cask install --appdir="~/Applications" caffeine
+# brew cask install --appdir="~/Applications" omnigraffle
+brew cask install --appdir="~/Applications" spotify
+brew cask install --appdir="~/Applications" helium
+brew cask install --appdir="~/Applications" lightpaper
+brew cask install --appdir="~/Applications" postgres
+# brew cask install --appdir="~/Applications" openoffice
+# brew cask install --appdir="~/Applications" mou
 
 # Development tool casks
 # brew cask install --appdir="/Applications" sublime-text3
