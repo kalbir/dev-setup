@@ -95,6 +95,14 @@ function runDots() {
             echo ""
             ./android.sh
         fi
+        if [ $ARG == "elixir" ] || [ $ARG == "all" ]; then
+            # Run the elixir.sh Script
+            echo "------------------------------"
+            echo "Setting up Elixir development environment."
+            echo "------------------------------"
+            echo ""
+            ./elixir.sh
+        fi
     done
 
     echo "------------------------------"
