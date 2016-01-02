@@ -32,5 +32,11 @@ mix local.hex
 # Install phoenix from github
 mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.1.1/phoenix_new-1.1.1.ez
 
+# Add Elixir syntax highlighting for vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+git clone https://github.com/elixir-lang/vim-elixir.git ~/.vim/bundle/vim-elixir
+
 
 

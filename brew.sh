@@ -142,27 +142,27 @@ brew install caskroom/cask/brew-cask
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="~/Applications" java
-# brew cask install --appdir="~/Applications" xquartz
 brew cask install --appdir="~/Applications" flux
 brew cask install --appdir="~/Applications" vlc
 brew cask install --appdir="~/Applications" utorrent
 brew cask install --appdir="~/Applications" tweetbot
 brew cask install --appdir="~/Applications" caffeine
-# brew cask install --appdir="~/Applications" omnigraffle
 brew cask install --appdir="~/Applications" spotify
 brew cask install --appdir="~/Applications" helium
 brew cask install --appdir="~/Applications" lightpaper
 brew cask install --appdir="~/Applications" postgres
+# brew cask install --appdir="~/Applications" xquartz
+# brew cask install --appdir="~/Applications" omnigraffle
 # brew cask install --appdir="~/Applications" openoffice
 # brew cask install --appdir="~/Applications" mou
 
 # Development tool casks
-# brew cask install --appdir="/Applications" sublime-text3
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" heroku-toolbelt
 # brew cask install --appdir="/Applications" macdown
+# brew cask install --appdir="/Applications" sublime-text3
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
