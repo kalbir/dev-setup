@@ -139,17 +139,20 @@ heroku update
 brew install caskroom/cask/brew-cask
 
 # Core casks
-brew cask install --appdir="/Applications" alfred
+brew cask install --appdir="/Applications" alfred # this didn't work
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" flux
 brew cask install --appdir="~/Applications" vlc
-brew cask install --appdir="~/Applications" utorrent
-brew cask install --appdir="~/Applications" tweetbot
+brew cask install --appdir="~/Applications" utorrent # this didn't work
+# 404
+brew cask install --appdir="~/Applications" tweetbot # this didn't work
+# no available cask
 brew cask install --appdir="~/Applications" caffeine
 brew cask install --appdir="~/Applications" spotify
 brew cask install --appdir="~/Applications" helium
-brew cask install --appdir="~/Applications" lightpaper
+brew cask install --appdir="~/Applications" lightpaper # this didn't work
+# error Download failed on Cast 'lightpaper'
 brew cask install --appdir="~/Applications" postgres
 # brew cask install --appdir="~/Applications" xquartz
 # brew cask install --appdir="~/Applications" omnigraffle
@@ -158,7 +161,8 @@ brew cask install --appdir="~/Applications" postgres
 
 # Development tool casks
 brew cask install --appdir="/Applications" atom
-brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" virtualbox # this didn't work
+# error Command failed to execute "usr/bin/sudo","-E", "/usr/sbin/installer"... 
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" heroku-toolbelt
 # brew cask install --appdir="/Applications" macdown
