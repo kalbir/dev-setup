@@ -139,21 +139,18 @@ heroku update
 brew install caskroom/cask/brew-cask
 
 # Core casks
-brew cask install --appdir="/Applications" alfred # this didn't work
+brew cask install --appdir="/Applications" alfred 
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" flux
 brew cask install --appdir="~/Applications" vlc
-brew cask install --appdir="~/Applications" utorrent # this didn't work
-# 404
-brew cask install --appdir="~/Applications" tweetbot # this didn't work
-# no available cask
+brew cask install --appdir="~/Applications" utorrent # this didn't work # 404
 brew cask install --appdir="~/Applications" caffeine
 brew cask install --appdir="~/Applications" spotify
 brew cask install --appdir="~/Applications" helium
-brew cask install --appdir="~/Applications" lightpaper # this didn't work
-# error Download failed on Cast 'lightpaper'
+brew cask install --appdir="~/Applications" lightpaper # this didn't work # error Download failed on Cast 'lightpaper'
 brew cask install --appdir="~/Applications" postgres
+brew cask install --appdir="~/Applications" ghi
 # brew cask install --appdir="~/Applications" xquartz
 # brew cask install --appdir="~/Applications" omnigraffle
 # brew cask install --appdir="~/Applications" openoffice
@@ -187,6 +184,9 @@ brew cask alfred link
 # Install Docker, which requires virtualbox
 brew install docker
 brew install boot2docker
+
+# Install memcached for rails caching stuff
+brew install memcached
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
