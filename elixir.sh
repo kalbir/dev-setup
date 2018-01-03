@@ -8,21 +8,18 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Check for Homebrew,
+# Check for asdf
 # Install if we don't have it
-if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if test ! $(which asdf); then
+  echo "Installing asdf..."
+  brew install asdf
 fi
 
-# Make sure we’re using the latest Homebrew.
-brew update
+# make sure we are using latest version of asdf
+brew upgrade asdf
 
-brew install elixir
-brew install node
-
-# Remove outdated versions from the cellar.
-brew cleanup
+# Install erlang 18 & 19 using asdf and use version 18
+asdf plugin-add erlang
 
 # Install phoenix -> assumes we already have postgres
 
@@ -37,6 +34,3 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 git clone https://github.com/elixir-lang/vim-elixir.git ~/.vim/bundle/vim-elixir
-
-
-
