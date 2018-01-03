@@ -78,7 +78,6 @@ brew install woff2
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install nmap
 brew install tcptrace
-<<<<<<< HEAD
 # brew install aircrack-ng
 # brew install bfg
 # brew install binutils
@@ -101,11 +100,6 @@ brew install tcptrace
 # brew install ucspi-tcp # `tcpserver` etc.
 # brew install xpdf
 # brew install xz
-=======
-brew install ucspi-tcp # `tcpserver` etc.
-brew install homebrew/x11/xpdf
-brew install xz
->>>>>>> bb3c6f1bbc2bcba2514517b87094f3e04fa6e646
 
 # Install other useful binaries.
 brew install ack
@@ -113,13 +107,10 @@ brew install git
 brew install git-lfs
 brew install git-flow
 brew install git-extras
-<<<<<<< HEAD
-=======
 brew install hub
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
->>>>>>> bb3c6f1bbc2bcba2514517b87094f3e04fa6e646
 brew install p7zip
 brew install pv
 brew install rename
@@ -153,7 +144,7 @@ brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 
 # Core casks
-brew cask install --appdir="/Applications" alfred 
+brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm2
 brew cask install --appdir="~/Applications" java
 brew cask install --appdir="~/Applications" flux
@@ -171,21 +162,13 @@ brew cask install --appdir="~/Applications" ghi
 # brew cask install --appdir="~/Applications" mou
 
 # Development tool casks
-<<<<<<< HEAD
-=======
-brew cask install --appdir="/Applications" sublime-text
->>>>>>> bb3c6f1bbc2bcba2514517b87094f3e04fa6e646
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox # this didn't work
-# error Command failed to execute "usr/bin/sudo","-E", "/usr/sbin/installer"... 
+# error Command failed to execute "usr/bin/sudo","-E", "/usr/sbin/installer"...
 brew cask install --appdir="/Applications" vagrant
-<<<<<<< HEAD
 brew cask install --appdir="/Applications" heroku-toolbelt
 # brew cask install --appdir="/Applications" macdown
 # brew cask install --appdir="/Applications" sublime-text3
-=======
-brew cask install --appdir="/Applications" macdown
->>>>>>> bb3c6f1bbc2bcba2514517b87094f3e04fa6e646
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
