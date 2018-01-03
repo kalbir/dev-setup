@@ -34,8 +34,7 @@ brew install findutils
 brew install gnu-sed --with-default-names
 # Install Bash 4.
 brew install bash
-brew tap homebrew/versions
-brew install bash-completion2
+brew install bash-completion@2
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
 # Prompts for password
@@ -43,31 +42,19 @@ sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 # Change to the new shell, prompts for password
 chsh -s /usr/local/bin/bash
 
+# A note on programming languages.
+# Wherever possible I am maintaining programming languages through asdf (https://github.com/asdf-vm/asdf)
+brew install asdf
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-# brew install ringojs
-# brew install narwhal
-
-# Install Python
-brew install python
-brew install python3
-
-# Install ruby-build and rbenv
-brew install ruby-build
-brew install rbenv
-LINE='eval "$(rbenv init -)"'
-grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
-
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
-# brew install homebrew/php/php55 --with-gmp
+brew install grep --with-default-names # --with-default-names overrides system grep
+brew install openssh
+brew install screen
+brew install curl
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -78,56 +65,28 @@ brew install woff2
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install nmap
 brew install tcptrace
-# brew install aircrack-ng
-# brew install bfg
-# brew install binutils
-# brew install binwalk
-# brew install cifer
-# brew install dex2jar
-# brew install dns2tcp
-# brew install fcrackzip
-# brew install foremost
-# brew install hashpump
-# brew install hydra
-# brew install john
-# brew install knock
-# brew install netpbm
-# brew install pngcheck
-# brew install socat
-# brew install sqlmap
-# brew install tcpflow
-# brew install tcpreplay
-# brew install ucspi-tcp # `tcpserver` etc.
-# brew install xpdf
-# brew install xz
 
 # Install other useful binaries.
 brew install ack
+brew install automake
+brew install cmake
 brew install git
 brew install git-lfs
-brew install git-flow
 brew install git-extras
 brew install hub
 brew install imagemagick --with-webp
-brew install lua
+brew install jq
 brew install lynx
 brew install p7zip
+brew install pandoc
+brew install pkg-config libffi
 brew install pv
 brew install rename
 brew install rhino
-brew install speedtest_cli
 brew install ssh-copy-id
 brew install tree
 brew install webkit2png
 brew install zopfli
-brew install pkg-config libffi
-brew install pandoc
-# brew install pigz
-# brew install dark-mode
-# brew install exiv2
-# brew install imagemagick --with-webp
-# brew install lua
-# brew install lynx
 
 # Lxml and Libxslt
 brew install libxml2
@@ -140,59 +99,85 @@ brew install heroku-toolbelt
 heroku update
 
 # Install Cask
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
+brew install brew-cask-completion
 brew tap caskroom/versions
 
-# Core casks
-brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" flux
-brew cask install --appdir="~/Applications" vlc
-brew cask install --appdir="~/Applications" utorrent # this didn't work # 404
-brew cask install --appdir="~/Applications" caffeine
-brew cask install --appdir="~/Applications" spotify
-brew cask install --appdir="~/Applications" helium
-brew cask install --appdir="~/Applications" lightpaper # this didn't work # error Download failed on Cast 'lightpaper'
-brew cask install --appdir="~/Applications" postgres
-brew cask install --appdir="~/Applications" ghi
-# brew cask install --appdir="~/Applications" xquartz
-# brew cask install --appdir="~/Applications" omnigraffle
-# brew cask install --appdir="~/Applications" openoffice
-# brew cask install --appdir="~/Applications" mou
+# Things that make my machine work
+brew cask install alfred
+brew cask install flux
+brew cask install vlc
+# utorrent - the name in cask is bittorrent
+brew cask install bittorrent
+brew cask install caffeine
+brew cask install spotify
+brew cask install helium
+brew cask install skype
+brew cask install skype-for-business
+brew cask install slack
+brew cask install dropbox
+brew cask install mou
+brew cask install simplenote
+brew cask install gimp
+# rocket - universal emoji picker (http://matthewpalmer.net/rocket/)
+brew cask install rocket
+# franz - connect to multiple chat systems
+brew cask install franz
+brew cask install disk-inventory-x
+# itsycal - small calendar for the taskbar clock
+brew cask install itsycal
+brew cask install tunnelblick
+brew cask install keybase
+brew cask install backblaze
+brew cask install avast-security
+brew cask install nordvpn
+brew cask install monodraw
+
+# Some google tools
+brew cask install google-photos-backup-and-sync
+brew cask install google-drive-file-stream
 
 # Development tool casks
-brew cask install --appdir="/Applications" atom
-brew cask install --appdir="/Applications" virtualbox # this didn't work
-# error Command failed to execute "usr/bin/sudo","-E", "/usr/sbin/installer"...
-brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" heroku-toolbelt
-# brew cask install --appdir="/Applications" macdown
-# brew cask install --appdir="/Applications" sublime-text3
+brew cask install iterm2
+brew cask install atom
+brew cask install virtualbox # this didn't work
+brew cask install heroku-toolbelt
+brew cask install virtualbox
 
-# Misc casks
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" skype
-brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" dropbox
-brew cask install --appdir="/Applications" evernote
-brew cask install --appdir="/Applications" 1password
-#brew cask install --appdir="/Applications" gimp
-#brew cask install --appdir="/Applications" inkscape
+# Web browsers
+brew cask install google-chrome
+brew cask install firefox
 
-#Remove comment to install LaTeX distribution MacTeX
+# LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
 
+# Development tools
+# ghi - command line tool for github issues
+brew install ghi
 # Install Docker, which requires virtualbox
 brew install docker
-brew install boot2docker
+brew install ansible
+brew install awscli
 
-# Install memcached for rails caching stuff
+# Install some databases
 brew install memcached
+brew install mysql
+brew install mongodb
+brew install sqlite
+brew cask install postgres
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode
+brew cask install qlstephen
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install qlprettypatch
+brew cask install quicklook-csv
+brew cask install betterzipql
+brew cask install qlimagesize
+brew cask install webpquicklook
+brew cask install suspicious-package
 
 # Remove outdated versions from the cellar.
+brew cask cleanup
 brew cleanup
