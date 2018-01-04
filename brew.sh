@@ -142,7 +142,8 @@ brew cask install iterm2
 brew cask install atom
 brew cask install virtualbox # this didn't work
 brew cask install heroku-toolbelt
-brew cask install virtualbox
+# Install docker for mac rather than docker machine
+brew cask install docker
 
 # Web browsers
 brew cask install google-chrome
@@ -154,8 +155,6 @@ brew cask install firefox
 # Development tools
 # ghi - command line tool for github issues
 brew install ghi
-# Install Docker, which requires virtualbox
-brew install docker
 brew install ansible
 brew install awscli
 
