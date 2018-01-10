@@ -148,6 +148,7 @@ brew cask install docker
 # Web browsers
 brew cask install google-chrome
 brew cask install firefox
+brew cask install brave
 
 # LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
