@@ -76,6 +76,7 @@ brew install git-extras
 brew install hub
 brew install imagemagick --with-webp
 brew install jq
+brew install kubectl
 brew install lynx
 brew install p7zip
 brew install pandoc
