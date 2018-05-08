@@ -133,6 +133,7 @@ brew cask install backblaze
 brew cask install avast-security
 brew cask install nordvpn
 brew cask install monodraw
+brew install caskroom/cask/muzzle
 
 # Some google tools
 brew cask install google-photos-backup-and-sync
