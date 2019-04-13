@@ -180,6 +180,12 @@ brew cask install qlimagesize
 brew cask install webpquicklook
 brew cask install suspicious-package
 
+# Some better versions of tools. From: https://remysharp.com/2018/08/23/cli-improved
+brew install fzf
+brew install htop
+brew install tldr
+brew install bat
+
 # Remove outdated versions from the cellar.
 brew cask cleanup
 brew cleanup
