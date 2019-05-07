@@ -26,8 +26,8 @@ asdf plugin-add erlang
 # Make sure hex is installed
 mix local.hex
 
-# Install phoenix from github
-mix archive.install https://github.com/phoenixframework/phoenix/releases/download/v1.1.1/phoenix_new-1.1.1.ez
+# Install phoenix
+mix archive.install hex phx_new 1.4.4
 
 # Add Elixir syntax highlighting for vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
